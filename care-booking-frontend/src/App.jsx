@@ -106,8 +106,8 @@ function AuthPanel({ onLogin }) {
         </h1>
 
         <p>
-          選擇合適的服務與時段，
-          讓每一次照護都有清楚的安排。
+          選擇合適的服務專員與時段，
+          讓每一次照護都有貼心的安排。
         </p>
 
         <div className="intro-tags">
