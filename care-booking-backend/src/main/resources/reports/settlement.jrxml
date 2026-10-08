@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport name="settlement"
+              language="java"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="515"
+              leftMargin="40"
+              rightMargin="40"
+              topMargin="40"
+              bottomMargin="40">
+
+    <property name="com.jaspersoft.studio.data.defaultdataadapter"
+              value="One Empty Record"/>
+
+    <style name="Base"
+           default="true"
+           fontName="CareTC"
+           fontSize="11.0"/>
+
+    <parameter name="PREVIEW_NOTICE" class="java.lang.String">
+        <defaultValueExpression><![CDATA["設計預覽－以下為示範資料"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="BOOKING_ID" class="java.lang.String">
+        <defaultValueExpression><![CDATA["1001"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="CASE_NAME" class="java.lang.String">
+        <defaultValueExpression><![CDATA["陳阿春"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="CUSTOMER" class="java.lang.String">
+        <defaultValueExpression><![CDATA["陳美華"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="CAREGIVER" class="java.lang.String">
+        <defaultValueExpression><![CDATA["林雅婷"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="SERVICE" class="java.lang.String">
+        <defaultValueExpression><![CDATA["居家照顧"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="ACTUAL_START" class="java.lang.String">
+        <defaultValueExpression><![CDATA["2026/10/05 09:00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="ACTUAL_END" class="java.lang.String">
+        <defaultValueExpression><![CDATA["2026/10/05 10:00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="TOTAL" class="java.lang.String">
+        <defaultValueExpression><![CDATA["NT$ 1,000.00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="SUBSIDY" class="java.lang.String">
+        <defaultValueExpression><![CDATA["NT$ 800.00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="CUSTOMER_AMOUNT" class="java.lang.String">
+        <defaultValueExpression><![CDATA["NT$ 200.00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="PAYMENT_STATUS" class="java.lang.String">
+        <defaultValueExpression><![CDATA["已確認收款"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="PAYMENT_REFERENCE" class="java.lang.String">
+        <defaultValueExpression><![CDATA["DEMO-PAY-1001"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="PAID_AT" class="java.lang.String">
+        <defaultValueExpression><![CDATA["2026/10/06 10:00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="SUBSIDY_RECEIVED_AT" class="java.lang.String">
+        <defaultValueExpression><![CDATA["尚未登錄入帳"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="SUBSIDY_REFERENCE" class="java.lang.String">
+        <defaultValueExpression><![CDATA["—"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="REFUND_AMOUNT" class="java.lang.String">
+        <defaultValueExpression><![CDATA["NT$ 0.00"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="REFUND_REFERENCE" class="java.lang.String">
+        <defaultValueExpression><![CDATA["—"]]></defaultValueExpression>
+    </parameter>
+
+    <parameter name="REFUNDED_AT" class="java.lang.String">
+        <defaultValueExpression><![CDATA["尚未退款"]]></defaultValueExpression>
+    </parameter>
+
+    <title height="80" splitType="Stretch">
+        <element kind="staticText"
+                 x="0" y="0" width="515" height="38"
+                 fontSize="23.0" forecolor="#20695C">
+            <text><![CDATA[安心長照－費用結算單]]></text>
+        </element>
+
+        <element kind="textField"
+                 x="0" y="43" width="515" height="25"
+                 forecolor="#A04A00">
+            <expression><![CDATA[$P{PREVIEW_NOTICE}]]></expression>
+        </element>
+    </title>
+
+    <detail>
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[預約編號]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{BOOKING_ID}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[個案姓名]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{CASE_NAME}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[顧客姓名]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{CUSTOMER}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[照服員]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{CAREGIVER}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[服務項目]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{SERVICE}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[實際開始]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{ACTUAL_START}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[實際結束]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{ACTUAL_END}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[服務總額]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{TOTAL}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[核准補助]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{SUBSIDY}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[顧客自付]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{CUSTOMER_AMOUNT}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[付款狀態]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{PAYMENT_STATUS}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[付款參考號]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{PAYMENT_REFERENCE}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[確認收款時間]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{PAID_AT}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[補助入帳時間]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{SUBSIDY_RECEIVED_AT}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[補助入帳參考號]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{SUBSIDY_REFERENCE}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[已退自付金額]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{REFUND_AMOUNT}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[退款參考號]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{REFUND_REFERENCE}]]></expression>
+            </element>
+        </band>
+
+        <band height="30" splitType="Stretch">
+            <element kind="staticText"
+                     x="0" y="0" width="130" height="26"
+                     forecolor="#59636B">
+                <text><![CDATA[退款完成時間]]></text>
+            </element>
+            <element kind="textField"
+                     x="135" y="0" width="380" height="26"
+                     textAdjust="StretchHeight" blankWhenNull="true">
+                <expression><![CDATA[$P{REFUNDED_AT}]]></expression>
+            </element>
+        </band>
+    </detail>
+
+    <pageFooter height="25">
+        <element kind="textField"
+                 x="365" y="0" width="150" height="20"
+                 hTextAlign="Right"
+                 fontSize="9.0" forecolor="#777777">
+            <expression><![CDATA["第 " + $V{PAGE_NUMBER} + " 頁"]]></expression>
+        </element>
+    </pageFooter>
+
+    <summary height="45" splitType="Stretch">
+        <element kind="staticText"
+                 x="0" y="10" width="515" height="30"
+                 fontSize="10.0" forecolor="#777777">
+            <text><![CDATA[本單為內部結算紀錄，非政府核銷憑證或統一發票。]]></text>
+        </element>
+    </summary>
+
+</jasperReport>

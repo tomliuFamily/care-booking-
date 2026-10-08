@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+    <fontFamily name="CareTC">
+        <normal>fonts/NotoSansCJKtc-Regular.otf</normal>
+        <bold>fonts/NotoSansCJKtc-Regular.otf</bold>
+        <italic>fonts/NotoSansCJKtc-Regular.otf</italic>
+        <boldItalic>fonts/NotoSansCJKtc-Regular.otf</boldItalic>
+        <pdfEncoding>Identity-H</pdfEncoding>
+        <pdfEmbedded>true</pdfEmbedded>
+    </fontFamily>
+</fontFamilies>

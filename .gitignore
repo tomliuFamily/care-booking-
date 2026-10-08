@@ -1,0 +1,42 @@
+# 作業系統
+.DS_Store
+Thumbs.db
+
+# Java / Maven 建置結果
+**/target/
+*.class
+
+# React / Node.js
+**/node_modules/
+**/dist/
+**/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE 本機設定
+**/.idea/
+**/.vscode/
+**/.settings/
+**/.classpath
+**/.project
+*.iml
+
+# 本機環境變數與機密設定
+**/.env
+**/.env.*
+!**/.env.example
+**/application-local.properties
+**/application-local.yml
+**/application-local.yaml
+
+# 私鑰
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+
+# 日誌
+*.log
+**/logs/
