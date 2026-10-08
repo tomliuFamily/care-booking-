@@ -100,9 +100,9 @@ function AuthPanel({ onLogin }) {
         <span className="eyebrow">CARE WITH WARMTH</span>
 
         <h1>
-          把照顧安排好，
+          愛關心，把照顧安排好，
           <br />
-          讓家人更安心。
+          手把手，讓家人更安心。
         </h1>
 
         <p>
