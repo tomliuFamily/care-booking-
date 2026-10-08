@@ -104,6 +104,8 @@ function AuthPanel({ onLogin }) {
           <br />
           手把手，讓家人更安心。
         </h1>
+        
+        <p>系統版本：v1.0.1</p>
 
         <p>
           選擇合適的服務專員與時段，
